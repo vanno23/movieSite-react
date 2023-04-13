@@ -1,0 +1,12 @@
+@use '../../styles/scss/mixin' as *;
+.videoContainer{
+  margin-bottom: 3rem;
+  .video {
+    @include container;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    .videoTitle {
+        margin-bottom: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@use '../../styles/scss/media' as *;
+@use '../../styles/scss/variables' as *;
+@use '../../styles/scss/mixin' as *;
+
+.header {
+    position: fixed;
+    height: 8rem;
+    transition: 0.3s;
+    width: 100%;
+    padding-inline: 2rem;
+    z-index: 9999;
+
+    &.headerScroll {
+        height: 5rem;
+        background-color: $body-bg;
+    }
+
+    .header_flex {
+        display: flex;
+        justify-content: space-between;
+        @include container;
+        height: 100%;
+
+        .title {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                width: 70px;
+
+                @include tablet {
+                    width: 50px;
+                }
+                @include mobile {
+                    width: 40px;
+                }
+            }
+
+            .title {
+                color: #fff;
+                font-size: 2.5rem;
+                font-weight: 600;
+                transition: .1s;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+
+            @include mobile {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                height: 5rem;
+                width: 100%;
+                background-color: $body-bg;
+                padding: 0 2rem;
+                box-shadow: $box-shadow;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            li {
+
+                a {
+                    position: relative;
+                    text-transform: capitalize;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    transition: .1s;
+
+                    &::after {
+                        content: '';
+                        bottom: -8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        position: absolute;
+                        height: 2px;
+                        width: 0%;
+                        background-color: $main-color; // Use the $main-color variable from the media module
+                        transition: .5s;
+                    }
+
+                    &:hover {
+                        color: $main-color;
+                    }
+
+                    &.active::after,
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}

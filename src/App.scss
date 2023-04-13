@@ -1,0 +1,35 @@
+@use './styles/scss/variables' as vars;
+@use './styles/scss/media' as media;
+@use './styles/scss/font' as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 100%;
+
+    @include media.tablet {
+        font-size: 80%;
+    }
+
+    @include media.mobile {
+        font-size: 60%;
+    }
+}
+
+body {
+    font-family: vars.$font-family;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: vars.$body-bg;
+    color: vars.$txt-color;
+}
+
+a {
+    color: #fff;
+}

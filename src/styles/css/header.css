@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  height: 8rem;
+  transition: 0.3s;
+  width: 100%;
+  padding-inline: 2rem;
+  z-index: 9999;
+}
+.header.headerScroll {
+  height: 5rem;
+  background-color: #0f0f0f;
+}
+.header .header_flex {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1660px;
+  margin: auto;
+  height: 100%;
+}
+.header .header_flex .title {
+  display: flex;
+  align-items: center;
+}
+.header .header_flex .title .logo {
+  width: 70px;
+}
+@media only screen and (max-width: 1024px) {
+  .header .header_flex .title .logo {
+    width: 50px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header .header_flex .title .logo {
+    width: 40px;
+  }
+}
+.header .header_flex .title .title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.header .header_flex .nav {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.header .header_flex .nav li a {
+  position: relative;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: 0.1s;
+}
+.header .header_flex .nav li a::after {
+  content: "";
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background-color: #ff0000;
+  transition: 0.5s;
+}
+.header .header_flex .nav li a:hover {
+  color: #ff0000;
+}
+.header .header_flex .nav li a.active::after, .header .header_flex .nav li a:hover::after {
+  width: 100%;
+}/*# sourceMappingURL=header.css.map */

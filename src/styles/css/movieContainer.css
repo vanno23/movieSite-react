@@ -1,0 +1,9 @@
+.movieContainer {
+  max-width: 1660px;
+  margin: auto;
+  padding-inline: 2rem;
+  margin-bottom: 3rem;
+}
+.movieContainer .movieContainer_header {
+  margin-bottom: 2rem;
+}/*# sourceMappingURL=movieContainer.css.map */

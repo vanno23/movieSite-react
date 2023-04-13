@@ -1,0 +1,29 @@
+@use '../../styles/scss/variables' as *;
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner-container{
+  z-index: 999;
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  place-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-60px, -50%);
+
+  .loading-spinner {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-top: 10px solid #ff0000;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+  }  
+}
+

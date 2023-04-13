@@ -1,0 +1,25 @@
+.movieItems {
+  display: flex;
+}
+.movieItems .swiper-slide {
+  width: 15%;
+}
+@media only screen and (max-width: 1024px) {
+  .movieItems .swiper-slide {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .movieItems .swiper-slide {
+    width: 40%;
+  }
+}
+.movieItems .swiper-slide .movieItem .movieItem-bg {
+  border-radius: 30px;
+  width: 100%;
+  padding-top: 160%;
+  margin-bottom: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=movieItem.css.map */
